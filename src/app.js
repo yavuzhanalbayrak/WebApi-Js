@@ -1,11 +1,11 @@
 import express, { json, urlencoded } from "express";
-import cors from 'cors';
+import cors from "cors";
 // import helmet from 'helmet';
 // import morgan from 'morgan';
 // import connectDB from './config/database';
 // import { info } from './config/logger';
 import routes from "./routes/index.js";
-// import errorHandler from './middlewares/errorHandler';
+import errorHandler from "./middlewares/errorHandler.js";
 import env from "./config/env.js";
 
 const app = express();
@@ -18,15 +18,12 @@ app.use(cors());
 
 // connectDB();
 
-app.use("/api/v1", routes);
+app.use(routes);
 
-app.use((req, res, next) => {
-  res.status(404).json({ success: false, message: "Route not found" });
-});
-
-// app.use(errorHandler);
+app.use(errorHandler);
 
 const PORT = env.PORT;
+
 app.listen(PORT, () => {
   // info(`🚀 Server running on http://localhost:${PORT}`);
   console.log(`🚀 Server running on http://localhost:${PORT}`);
