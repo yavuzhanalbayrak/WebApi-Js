@@ -2,8 +2,13 @@ import Person from "../models/person.js";
 
 class PersonRepository {
   async getAllPersons() {
-      const persons = await Person.find();
-      return persons;
+    return await Person.find()
+      .then((persons) => {
+        return persons;
+      })
+      .catch((error) => {
+        throw new Error("Veri çekme hatası: " + error.message);
+      });
   }
 }
 
