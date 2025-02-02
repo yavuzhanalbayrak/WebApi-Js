@@ -1,7 +1,7 @@
 import express, { json, urlencoded } from "express";
 import cors from "cors";
 import helmet from 'helmet';
-// import connectDB from './config/database';
+import connectDB from './config/database.js';
 import logger, { logRequests } from "./config/logger.js";
 import routes from "./routes/index.js";
 import errorHandler from "./middlewares/errorHandler.js";
@@ -16,7 +16,7 @@ app.use(urlencoded({ extended: true }));
 app.use(cors());
 app.use(helmet());
 
-// connectDB();
+connectDB();
 
 app.use(routes);
 
