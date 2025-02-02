@@ -1,7 +1,6 @@
 import express, { json, urlencoded } from "express";
 import cors from "cors";
-// import helmet from 'helmet';
-// import morgan from 'morgan';
+import helmet from 'helmet';
 // import connectDB from './config/database';
 import logger, { logRequests } from "./config/logger.js";
 import routes from "./routes/index.js";
@@ -15,8 +14,7 @@ app.use(logRequests);
 app.use(json());
 app.use(urlencoded({ extended: true }));
 app.use(cors());
-// app.use(helmet());
-// app.use(morgan('dev'));
+app.use(helmet());
 
 // connectDB();
 
