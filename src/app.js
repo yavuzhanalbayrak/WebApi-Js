@@ -26,9 +26,10 @@ app.use((req, res, next) => {
 
 // app.use(errorHandler);
 
-app.listen(() => {
+const PORT = env.PORT;
+app.listen(PORT, () => {
   // info(`🚀 Server running on http://localhost:${PORT}`);
-  console.log(`🚀 Server running on http://localhost:${env.PORT}`);
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
 
 export default app;
