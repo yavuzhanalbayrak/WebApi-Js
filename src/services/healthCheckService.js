@@ -1,3 +1,6 @@
+import personRepository from "../repositories/personRepository.js";
+
 export async function healthCheck(userData) {
-    return 200;
+    let response = await personRepository.getAllPersons();
+    return response;
 }
