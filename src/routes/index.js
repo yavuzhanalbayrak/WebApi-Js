@@ -1,6 +1,6 @@
 import { Router } from "express";
 const router = Router();
-import Result from "../utils/Result.js";
+import Result from "../utils/result.js";
 
 import healthCheck from "./v1/healthCheckRoutes.js";
 
