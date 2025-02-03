@@ -6,11 +6,11 @@ import logger, { logRequests } from "./config/logger.js";
 import routes from "./routes/index.js";
 import errorHandler from "./middlewares/errorHandler.js";
 import env from "./config/env.js";
-import i18next from "./config/i18n.js";
-import middleware from "i18next-http-middleware";
+import {i18nMiddleware} from "./config/i18n.js";
 
 const app = express();
-app.use(middleware.handle(i18next));
+
+app.use(i18nMiddleware);
 
 app.use(logRequests);
 

@@ -8,5 +8,5 @@ const mapPerson = ({ _id, firstName, lastName }) => ({
 export async function healthCheck() {
   let people = await personRepository.getAllPersons();
 
-  return people.map(mapPerson);
+  return { people: people.map(mapPerson) };
 }

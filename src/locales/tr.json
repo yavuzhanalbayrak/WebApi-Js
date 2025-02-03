@@ -1,5 +1,8 @@
 {
-  "test": {
-    "testSuccess": "Test başarılı!"
+  "success": {
+    "requestSuccessful": "İstek başarılı oldu"
+  },
+  "error": {
+    "requestFailed": "İstek başarısız oldu"
   }
 }
