@@ -1,0 +1,8 @@
+{
+  "success": {
+    "requestSuccessful": "Request was successful"
+  },
+  "error": {
+    "requestFailed": "Request failed"
+  }
+}

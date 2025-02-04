@@ -1,0 +1,8 @@
+{
+  "success": {
+    "requestSuccessful": "İstek başarılı oldu"
+  },
+  "error": {
+    "requestFailed": "İstek başarısız oldu"
+  }
+}
