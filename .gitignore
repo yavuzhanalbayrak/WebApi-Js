@@ -23,7 +23,7 @@ jspm_packages/
 Thumbs.db
 
 # dotenv environment variable files
-.env
+.env*
 
 # Build output
 /dist
