@@ -1,12 +1,24 @@
-import personRepository from "../repositories/personRepository.js";
-const mapPerson = ({ _id, firstName, lastName }) => ({
+import blogRepository from "../repositories/blogRepository.js";
+const mapBlog = ({
   _id,
-  firstName,
-  lastName,
+  title,
+  thumbUrl,
+  date,
+  btnText,
+  href,
+  socialShare,
+}) => ({
+  _id,
+  title,
+  thumbUrl,
+  date,
+  btnText,
+  href,
+  socialShare,
 });
 
 export async function healthCheck() {
-  let people = await personRepository.getAllPersons();
+  let blog = await blogRepository.getAllBlogs();
 
-  return { people: people.map(mapPerson) };
+  return { blog: blog.map(mapBlog) };
 }

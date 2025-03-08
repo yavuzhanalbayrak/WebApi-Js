@@ -1,4 +1,7 @@
 import swaggerJSDoc from "swagger-jsdoc";
+import env from "./env.js";
+const PORT = env.PORT;
+const URL = env.URL;
 
 const swaggerOptions = {
   definition: {
@@ -10,7 +13,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: "http://localhost:3000/api/v1",
+        url: `${URL}:${PORT}/api/v1`,
         description: "Local server",
       },
     ],

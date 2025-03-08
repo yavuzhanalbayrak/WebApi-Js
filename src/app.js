@@ -26,9 +26,10 @@ app.use(routes);
 app.use(errorHandler);
 
 const PORT = env.PORT;
+const URL = env.URL;
 
 app.listen(PORT, () => {
-  logger.info(`🚀 Server running on http://localhost:${PORT}`);
+  logger.info(`🚀 Server running on ${URL}:${PORT}`);
 });
 
 export default app;
